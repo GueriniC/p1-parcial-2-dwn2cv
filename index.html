@@ -6,24 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
+  
 </head>
 <body>
   <header>
     <h1>Programación I | Parcial 2 | Guerini, Kang</h1>
   </header>
   <main>
-    
-  
-
-    <div id="product-list"></div>
-  
     <div id="cart">
-      <h2>Carrito</h2>
+      <div id="filter-bar">
+        <label for="categoria-select">Filtrar por categoría:</label>
+        <select id="categoria-select">
+          <option value="">Todas las categorías</option>
+          <option value="Remera">Remera</option>
+          <option value="Pantalón">Pantalón</option>
+          <option value="Abrigo">Abrigo</option>
+        </select>
+        <button id="filtrar-btn">Filtrar</button>
+        <button id="mostrar-todo-btn">Mostrar todo</button>
+      </div>
+
+      <h3>Carrito</h3>
       <p><span id="cart-item-count">0</span> ítems agregados</p>
       <p>Total: $<span id="cart-total">0.00</span></p>
       <div id="cart-detail"></div>
-      <button onclick="mostrarDetalleCarrito()">Mostrar detalle del carrito</button>
+      <button onclick="mostrarDetalleCarrito()">Ver mi carrito</button>
+      <div id="cart-detail">
+        <ul id="cart-product-list"></ul>
+      </div>
     </div>
+  
+    <div id="product-list"></div>
+  
+  
+    
   </main>
   <footer>
     <ul>
