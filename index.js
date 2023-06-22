@@ -18,12 +18,12 @@ class Producto {
   
   // Array de productos
   const productos = [
-    new Producto("Camisa", "Camisa a cuadros", 10.99, "imagen1.jpg", "Categoría 1"),
-    new Producto("Polera", "Polera de algodón", 15.99, "imagen2.jpg", "Categoría 2"),
-    new Producto("Sweter", "Sweter hilo fino a rayas", 8.99, "imagen3.jpg", "Categoría 1"),
-    new Producto("Pantalón", "Pantalón verde agua", 12.99, "imagen4.jpg", "Categoría 3"),
-    new Producto("Chomba", "Verde agua", 9.99, "imagen5.jpg", "Categoría 2"),
-    new Producto("Hoodie", "Hoodie 100% algodón", 11.99, "imagen6.jpg", "Categoría 3")
+    new Producto("Camisa", "Camisa a cuadros", 10.99, "imagen1.jpg", "Remera"),
+    new Producto("Jean", "Jean recto", 15.99, "imagen2.jpg", "pantalón"),
+    new Producto("Sweter", "Sweter hilo fino a rayas", 8.99, "imagen3.jpg", "abrigo"),
+    new Producto("Pantalón", "Pantalón verde agua", 12.99, "imagen4.jpg", "pantalón"),
+    new Producto("Chomba", "Verde agua", 9.99, "imagen5.jpg", "remera"),
+    new Producto("Hoodie", "Hoodie 100% algodón", 11.99, "imagen6.jpg", "abrigo")
   ];
   
   // Clase Carrito
@@ -68,6 +68,8 @@ class Producto {
   
   function mostrarProductos() {
     const productList = document.getElementById("product-list");
+    productList.innerHTML = "";
+
   
     productos.forEach((producto) => {
       const productoDiv = document.createElement("div");
@@ -102,6 +104,5 @@ class Producto {
     });
   }
  
-  
-  mostrarProductos();
-  
+
+  mostrarProductos("");
